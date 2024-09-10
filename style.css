@@ -1,0 +1,81 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e6ecf0; /* Twitter-like background */
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
+  border-radius: 8px;
+}
+
+/* Registration Styles */
+#registration {
+  text-align: center;
+}
+
+#registration input {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#registration button {
+  padding: 10px 20px;
+  background-color: #1da1f2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#registration button:hover {
+  background-color: #0a95dd;
+}
+
+/* Feed and Post Styles */
+#feed {
+  margin-top: 20px;
+}
+
+#postContent {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+#feed button {
+  padding: 10px 20px;
+  background-color: #1da1f2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+#feed button:hover {
+  background-color: #0a95dd;
+}
+
+/* Post Styles */
+.post {
+  background-color: #f5f8fa;
+  border: 1px solid #e1e8ed;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
