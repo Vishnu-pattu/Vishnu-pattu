@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Micro Blogging App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div id="registration">
+        <h1>Register</h1>
+        <input type="text" id="username" placeholder="Username" />
+        <input type="password" id="password" placeholder="Password" />
+        <button onclick="registerUser()">Register</button>
+      </div>
+
+      <div id="feed" style="display: none">
+        <h2>Your Feed</h2>
+        <textarea
+          id="postContent"
+          placeholder="What's on your mind?"
+        ></textarea>
+        <button onclick="createPost()">Post</button>
+
+        <h3>Posts</h3>
+        <div id="posts"></div>
+
+        <h3>Follow/Unfollow Users</h3>
+        <input
+          type="text"
+          id="followUserId"
+          placeholder="User ID to Follow/Unfollow"
+        />
+        <button onclick="followUser()">Follow</button>
+        <button onclick="unfollowUser()">Unfollow</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
