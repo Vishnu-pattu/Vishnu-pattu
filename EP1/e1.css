@@ -19,11 +19,12 @@ nav {
 nav ul {
     list-style: none;
     padding: 0;
+    text-align: center;
 }
 
 nav ul li {
     display: inline;
-    margin-right: 20px;
+    margin: 0 15px;
 }
 
 nav ul li a {
@@ -34,7 +35,6 @@ nav ul li a {
 .container {
     width: 80%;
     margin: auto;
-    overflow: hidden;
 }
 
 section {
@@ -46,21 +46,11 @@ h2 {
     margin-bottom: 20px;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-li {
-    background: #f4f4f4;
-    margin: 10px 0;
-    padding: 15px;
-    border-radius: 5px;
-}
-
 form {
     display: flex;
     flex-direction: column;
+    max-width: 500px;
+    margin: auto;
 }
 
 input, textarea {
@@ -88,5 +78,5 @@ footer {
     padding: 20px 0;
     background: #333;
     color: white;
-    position: relative;
 }
+
