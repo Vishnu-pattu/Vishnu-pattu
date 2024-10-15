@@ -1,13 +1,11 @@
 const products = [
     { name: "Fresh Fruits", price: 1000, img: "fresh images.jpg" },
-    { name: "Home Appliances", price: 20000, img: "home appliances.jpg" },
+    { name: "Home Appliances", price: 20000, img: "home-appliances.jpg" },
     { name: "Smartphones", price: 30000, img: "phones.jpg" },
     { name: "Smartwatches", price: 15000, img: "smartwatches.jpg" },
     { name: "Vegetables", price: 500, img: "vegetables.jpg" },
     { name: "Non-Vegetarian Items", price: 2000, img: "non-veg.jpg" },
 ];
-
-let totalAmount = 0;
 
 document.getElementById('login-form').addEventListener('submit', function(event) {
     event.preventDefault();
@@ -38,20 +36,19 @@ function displayProducts(products) {
             <img src="${product.img}" alt="${product.name}">
             <h3>${product.name}</h3>
             <p>Price: ₹${product.price}</p>
-            <input type="number" id="quantity-${product.name}" min="1" value="1">
-            <button onclick="addToCart('${product.name}', ${product.price})">Add to Cart</button>
+            <button onclick="buyProduct('${product.name}', ${product.price})">Buy</button>
         `;
         productList.appendChild(productDiv);
     });
 }
 
-function addToCart(productName, productPrice) {
-    const quantity = document.getElementById(`quantity-${productName}`).value;
-    const total = productPrice * quantity;
-    totalAmount += total;
-    document.getElementById('total-amount').textContent = totalAmount;
+function searchProducts() {
+    const query = document.getElementById('search').value.toLowerCase();
+    const filteredProducts = products.filter(product => product.name.toLowerCase().includes(query));
+    displayProducts(filteredProducts);
+}
 
-    // Enable the buy section and populate the product name
+function buyProduct(productName, productPrice) {
     document.getElementById('product-name').value = productName;
     document.getElementById('buy-section').style.display = 'block';
 }
@@ -62,10 +59,8 @@ document.getElementById('buy-form').addEventListener('submit', function(event) {
     const paymentMethod = document.getElementById('payment-method').value;
     const address = document.getElementById('address').value;
 
-    alert(`Order submitted for: ${productName}\nTotal Amount: ₹${totalAmount}\nPayment Method: ${paymentMethod}\nDelivery Address: ${address}`);
+    alert(`Order submitted for: ${productName}\nPayment Method: ${paymentMethod}\nDelivery Address: ${address}`);
     document.getElementById('buy-form').reset();
-    totalAmount = 0;
-    document.getElementById('total-amount').textContent = totalAmount;
     document.getElementById('buy-section').style.display = 'none';
 });
 
@@ -89,4 +84,29 @@ function submitReview() {
     document.getElementById('review-text').value = '';
     rating = 0;
     document.querySelectorAll('.rating span').forEach(span => span.style.color = 'black');
+}
+
+function addProduct() {
+    const productName = document.getElementById('new-product-name').value;
+    const productPrice = document.getElementById('new-product-price').value;
+    const productImage = document.getElementById('product-image').files[0];
+
+    if (productName && productPrice && productImage) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            products.push({ name: productName, price: parseInt(productPrice), img: e.target.result });
+            displayProducts(products);
+            document.getElementById('sell-form').reset();
+            document.getElementById('image-preview').style.display = 'none';
+        };
+        reader.readAsDataURL(productImage);
+    } else {
+        alert('Please fill all fields!');
+    }
+}
+
+function previewImage(event) {
+    const imagePreview = document.getElementById('image-preview');
+    imagePreview.src = URL.createObjectURL(event.target.files[0]);
+    imagePreview.style.display = 'block';
 }
