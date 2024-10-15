@@ -46,14 +46,6 @@ button:hover {
     background-color: #0056b3; /* Darker blue on hover */
 }
 
-.login-button {
-    background-color: #28a745; /* Green color for login button */
-}
-
-.login-button:hover {
-    background-color: #218838; /* Darker green on hover */
-}
-
 #reviews-section {
     margin-top: 20px;
 }
@@ -68,9 +60,9 @@ button:hover {
 }
 
 input[type="text"],
+input[type="number"],
 textarea,
-select,
-input[type="number"] {
+select {
     width: calc(100% - 22px);
     padding: 10px;
     margin: 5px 0;
