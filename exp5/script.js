@@ -4,7 +4,7 @@ const products = [
     { name: "Smartphones", price: 30000, img: "phones.jpg" },
     { name: "Smartwatches", price: 15000, img: "smartwatches.jpg" },
     { name: "Vegetables", price: 500, img: "vegetables.jpg" },
-    { name: "Non-Vegetarian Items", price: 2000, img: "non-veg.jpg" },
+    { name: "Non-Vegetarian Items", price: 2000, img: "non_veg.jpg" },
 ];
 
 document.getElementById('login-form').addEventListener('submit', function(event) {
