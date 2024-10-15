@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +8,7 @@
 </head>
 <body>
     <header>
-        <h1>Online Marketplace</h1>
+        <h1>Classified Marketplace</h1>
         <div id="user-info" style="display: none;">
             <span id="user-name"></span>
             <button onclick="logout()">Logout</button>
@@ -21,15 +20,27 @@
             <form id="login-form">
                 <label for="username">Username:</label>
                 <input type="text" id="username" required>
-                <button type="submit" class="login-button">Login</button>
+                <button type="submit">Login</button>
             </form>
         </section>
 
         <section id="sell-section" style="display: none;">
             <h2>Sell Your Products</h2>
+            <form id="sell-form" onsubmit="event.preventDefault(); addProduct();">
+                <label for="new-product-name">Product Name:</label>
+                <input type="text" id="new-product-name" required>
+                
+                <label for="new-product-price">Price (₹):</label>
+                <input type="number" id="new-product-price" required>
+                
+                <label for="product-image">Product Image:</label>
+                <input type="file" id="product-image" accept="image/*" onchange="previewImage(event)" required>
+                <img id="image-preview" style="display:none; max-width: 100px; margin-top: 10px;" alt="Image Preview">
+                
+                <button type="submit">Add Product</button>
+            </form>
             <input type="text" id="search" placeholder="Search products..." onkeyup="searchProducts()">
             <div id="product-list"></div>
-            <h3>Total Amount: ₹<span id="total-amount">0</span></h3>
         </section>
 
         <section id="buy-section" style="display: none;">
@@ -37,8 +48,6 @@
             <form id="buy-form">
                 <label for="product-name">Product Name:</label>
                 <input type="text" id="product-name" readonly required>
-                <label for="quantity">Quantity:</label>
-                <input type="number" id="quantity" min="1" value="1" required>
                 <label for="payment-method">Payment Method:</label>
                 <select id="payment-method" required>
                     <option value="cash">Cash on Delivery</option>
