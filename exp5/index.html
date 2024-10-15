@@ -1,1 +1,68 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Classified App</title>
+</head>
+<body>
+    <header>
+        <h1>Online Marketplace</h1>
+        <div id="user-info" style="display: none;">
+            <span id="user-name"></span>
+            <button onclick="logout()">Logout</button>
+        </div>
+    </header>
+    <main>
+        <section id="login-section">
+            <h2>Login</h2>
+            <form id="login-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" required>
+                <button type="submit" class="login-button">Login</button>
+            </form>
+        </section>
+
+        <section id="sell-section" style="display: none;">
+            <h2>Sell Your Products</h2>
+            <input type="text" id="search" placeholder="Search products..." onkeyup="searchProducts()">
+            <div id="product-list"></div>
+            <h3>Total Amount: ₹<span id="total-amount">0</span></h3>
+        </section>
+
+        <section id="buy-section" style="display: none;">
+            <h2>Buy Products</h2>
+            <form id="buy-form">
+                <label for="product-name">Product Name:</label>
+                <input type="text" id="product-name" readonly required>
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" min="1" value="1" required>
+                <label for="payment-method">Payment Method:</label>
+                <select id="payment-method" required>
+                    <option value="cash">Cash on Delivery</option>
+                    <option value="e-payment">E-Payment</option>
+                </select>
+                <label for="address">Delivery Address:</label>
+                <textarea id="address" required></textarea>
+                <button type="submit">Submit Order</button>
+            </form>
+            <div id="reviews-section">
+                <h3>Leave a Review</h3>
+                <div class="rating">
+                    <span onclick="rateProduct(1)">⭐</span>
+                    <span onclick="rateProduct(2)">⭐</span>
+                    <span onclick="rateProduct(3)">⭐</span>
+                    <span onclick="rateProduct(4)">⭐</span>
+                    <span onclick="rateProduct(5)">⭐</span>
+                </div>
+                <textarea id="review-text" placeholder="Write your review here..."></textarea>
+                <button onclick="submitReview()">Submit Review</button>
+                <div id="review-display"></div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
