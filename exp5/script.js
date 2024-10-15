@@ -1,6 +1,6 @@
 const products = [
     { name: "Fresh Fruits", price: 1000, img: "fresh images.jpg" },
-    { name: "Home Appliances", price: 20000, img: "home-appliances.jpg" },
+    { name: "Home Appliances", price: 20000, img: "home appliances.jpg" },
     { name: "Smartphones", price: 30000, img: "phones.jpg" },
     { name: "Smartwatches", price: 15000, img: "smartwatches.jpg" },
     { name: "Vegetables", price: 500, img: "vegetables.jpg" },
