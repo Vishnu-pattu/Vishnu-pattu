@@ -1,0 +1,73 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #e0f7fa; /* Light blue background */
+    font-family: 'Arial', sans-serif;
+}
+
+#loginContainer, #todoContainer {
+    text-align: center;
+    border: 1px solid #00796b; /* Dark teal border */
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff; /* White background */
+    width: 350px; /* Adjusted width */
+    margin: 20px; /* Space between containers */
+}
+
+h1, h2, h3 {
+    color: #00796b; /* Dark teal text */
+}
+
+input[type="text"] {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #00796b; /* Dark teal border */
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #00796b; /* Dark teal button */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #004d40; /* Darker teal on hover */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #b2dfdb; /* Light teal for list items */
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+}
+
+li:hover {
+    background-color: #80cbc4; /* Slightly darker on hover */
+}
+
+#headerImage {
+    width: 20%;      /* Set width to 80% of the container */
+    max-width: 800px; /* Set a maximum width for larger screens */
+    height: auto;    /* Maintain aspect ratio */
+    margin-top: 20px;
+}
+

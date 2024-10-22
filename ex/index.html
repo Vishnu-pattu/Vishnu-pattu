@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="loginContainer">
+        <h1>Login</h1>
+        <input type="text" id="username" placeholder="Enter your username">
+        <button id="loginButton">Login</button>
+    </div>
+
+    <div id="todoContainer" style="display:none;">
+        <h2>Welcome, <span id="welcomeUser"></span>!</h2>
+        <h3><strong>Your To-Do List:</strong></h3>
+        <input type="text" id="todoInput" placeholder="Enter your to-do item">
+        <button id="addTodoButton">Add 😊</button>
+        <ul id="todoList"></ul>
+    </div>
+
+    <img src="tdo.jpg" alt="Your Image" id="headerImage" />
+
+    <script src="script.js"></script>
+</body>
+</html>
