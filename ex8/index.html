@@ -1,1 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Survey Application</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container" id="loginContainer">
+        <h2>Login to Start</h2>
+        <input type="text" id="username" placeholder="Enter your name" required>
+        <button id="loginButton" onclick="login()">Login</button>
+    </div>
 
+    <div class="container" id="surveyContainer" style="display:none;">
+        <h2>Welcome to the Online Survey Application! 🎉</h2>
+        <button id="startButton" onclick="displayQuestions()">Start Survey</button>
+    </div>
+
+    <div class="container" id="questionContainer" style="display:none;">
+        <h2>Survey Questions</h2>
+        <div id="questions"></div>
+        <button id="submitButton" onclick="submitAnswers()" style="display:none;">Submit Answers</button>
+    </div>
+
+    <div class="container" id="thankYouContainer" style="display:none;">
+        <h2>Thank You for Your Responses! 😊</h2>
+        <p>Your feedback is valuable to us! 💖</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
