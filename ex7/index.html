@@ -1,1 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Management Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="loginForm">
+            <h2>Login</h2>
+            <input type="text" id="username" placeholder="Enter your username" required>
+            <button onclick="login()">Login</button>
+        </div>
 
+        <div id="dashboard" style="display:none;">
+            <h2>Project Management Dashboard</h2>
+            <h3>Welcome, <span id="userDisplay"></span>!</h3>
+            <div class="task-list">
+                <h4>Task List</h4>
+                <table id="taskTable">
+                    <tr>
+                        <th>Task Name</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </table>
+            </div>
+            <div class="add-task">
+                <h4>Add New Task</h4>
+                <input type="text" id="taskName" placeholder="Task Name" required>
+                <select id="taskStatus">
+                    <option value="Pending">Pending</option>
+                    <option value="In Progress">In Progress</option>
+                    <option value="Completed">Completed</option>
+                </select>
+                <button onclick="addTask()">Add Task</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

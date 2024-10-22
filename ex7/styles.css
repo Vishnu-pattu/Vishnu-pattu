@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    max-width: 600px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+h2, h3, h4 {
+    margin: 0 0 15px;
+    color: #333;
+    font-weight: bold; /* Bold text for headings */
+}
+
+input[type="text"], select {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px; /* Increased font size for better readability */
+}
+
+button {
+    padding: 10px;
+    background: #007bff; /* A vibrant blue for the button */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold; /* Bold text for button */
+}
+
+button:hover {
+    background: #0056b3; /* Darker blue on hover */
+}
+
+.task-list, .add-task {
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+    font-weight: bold; /* Bold text for table data */
+}
+
+th {
+    background: #007bff;
+    color: white;
+}
+
+td {
+    background: #f9f9f9;
+}
+
+td:hover {
+    background: #e9ecef; /* Light grey on hover */
+}
