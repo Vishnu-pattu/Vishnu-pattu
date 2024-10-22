@@ -1,0 +1,106 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background: #f9f9f9; /* Light background for contrast */
+}
+
+header {
+    background: #003366; /* Dark blue */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav {
+    background: #004080; /* Medium blue */
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background: #00509E; /* Lighter blue */
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background 0.3s; /* Smooth transition */
+}
+
+button:hover {
+    background: #003366; /* Dark blue on hover */
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.profile-image {
+    width: 150px; /* Adjust image size */
+    border-radius: 75px; /* Circular image */
+    margin: 15px 0;
+}
+
+section {
+    padding: 20px 0;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #003366; /* Dark blue */
+    font-weight: bold;
+    font-size: 2em; /* Larger font size for section titles */
+}
+
+ul {
+    list-style-type: square; /* Square bullets for projects */
+    padding-left: 20px; /* Indent list items */
+}
+
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #003366; /* Dark blue */
+    color: white;
+}
+
+/* Background styles for sections */
+.home-bg {
+    background-color: #e0f7fa; /* Light cyan */
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.about-bg {
+    background-color: #ffe0b2; /* Light orange */
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.projects-bg {
+    background-color: #f1f8e9; /* Light green */
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* Star icon */
+.star {
+    color: gold;
+    font-size: 1.5em;
+    vertical-align: middle; /* Align with text */
+}
