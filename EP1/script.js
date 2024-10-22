@@ -4,7 +4,7 @@ document.getElementById('homeBtn').addEventListener('click', function() {
             <h2><span class="star">★</span> My Details <span class="star">★</span></h2>
             <p><strong>Name:</strong> P. Vishnupriya</p>
             <p><strong>Email:</strong> vvv@gmail.com</p>
-            <p><strong>Phone:</strong> +1234567890</p>
+            <p><strong>Phone:</strong> +9012345678</p>
             <p><strong>Work Experience:</strong> Intern at DELL Company</p>
             <p><strong>College:</strong> ANNA University-BIT CAMPUS TRICHY</p>
         </div>
